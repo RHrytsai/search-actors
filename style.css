@@ -1,0 +1,106 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(135deg, #1e1e2e, #2a2a40);
+  color: #eaeaea;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+header h1 { font-size: 2rem; margin-bottom: 8px; }
+header p { color: #9aa0b5; }
+
+.upload-box {
+  border: 2px dashed #5a5f7a;
+  border-radius: 16px;
+  padding: 48px 24px;
+  text-align: center;
+  transition: .3s;
+  max-width: 700px;
+  margin: 0 auto 24px;
+  background: rgba(255,255,255,0.02);
+  cursor: pointer;
+}
+.upload-box.dragover {
+  border-color: #7c6cff;
+  background: rgba(124,108,255,0.1);
+}
+.upload-box button {
+  background: none;
+  border: none;
+  color: #7c6cff;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.preview {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.preview img {
+  max-width: 320px;
+  max-height: 320px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  display: block;
+  margin: 0 auto 12px;
+}
+#resetBtn {
+  background: #333a55;
+  color: #eaeaea;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#resetBtn:hover { background: #444d70; }
+
+.status {
+  text-align: center;
+  color: #9aa0b5;
+  min-height: 24px;
+  margin-bottom: 24px;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #232838;
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 12px;
+  transition: transform .2s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+.card:hover { transform: translateY(-4px); }
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  background: #161a26;
+}
+.card .name {
+  font-weight: 600;
+  margin-top: 10px;
+}
+.card .similarity {
+  color: #7c6cff;
+  font-size: .9rem;
+  margin-top: 4px;
+}
+
+.hidden { display: none; }

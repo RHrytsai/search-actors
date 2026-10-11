@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Поиск актёров по фото</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎬 Поиск актёров по фото</h1>
+    <p>Загрузите фото — мы найдём похожих актёров</p>
+  </header>
+
+  <main>
+    <div class="upload-box" id="dropZone">
+      <input type="file" id="fileInput" accept="image/*" hidden />
+      <p>📸 Перетащите фото сюда или <button id="selectBtn">выберите файл</button></p>
+    </div>
+
+    <div id="preview" class="preview hidden">
+      <img id="previewImg" alt="Загруженное фото" />
+      <button id="resetBtn">Загрузить другое</button>
+    </div>
+
+    <div id="status" class="status"></div>
+
+    <div id="results" class="results"></div>
+  </main>
+
+  <!-- Face API -->
+  <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
